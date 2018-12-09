@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.niranjan.media.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/back">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pause"
+        android:src="@drawable/pause"
+        android:background="#00ffffff"
+        android:onClick="pause"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/play"
+        android:layout_toStartOf="@+id/play" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/play"
+        android:src="@drawable/play"
+        android:background="#00ffffff"
+        android:onClick="play"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop"
+        android:src="@drawable/stop"
+        android:background="#00ffffff"
+        android:onClick="stop"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/play"
+        android:layout_toEndOf="@+id/play" />
+
+    <ImageView
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:id="@+id/imageView"
+        android:src="@drawable/art"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="My Media Player"
+        android:id="@+id/name"
+        android:textSize="20sp"
+        android:textColor="#0472c0"
+        android:layout_below="@+id/playlist"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:thumbTint="@color/colorPrimary"
+        android:progressTint="@color/colorPrimary"
+        android:layout_above="@+id/play"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rewind"
+        android:src="@drawable/r"
+        android:background="@null"
+        android:layout_below="@+id/seekBar"
+        android:onClick="previous"
+        android:layout_toLeftOf="@+id/pause"
+        android:layout_toStartOf="@+id/pause" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forward"
+        android:src="@drawable/f"
+        android:onClick="next"
+        android:layout_below="@+id/seekBar"
+        android:layout_toRightOf="@+id/stop"
+        android:layout_toEndOf="@+id/stop"
+        android:background="@null" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playlist"
+        android:onClick="playlist"
+        android:src="@drawable/listt"
+        android:background="#00ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar" />
+
+</RelativeLayout>
